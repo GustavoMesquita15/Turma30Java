@@ -51,7 +51,7 @@ programa
 	real total = 0.0, parcelas = 0.0
 
 	
-     escreva("Bem Vindo a GMF Games!\n")
+     escreva("Bem Vindo a Lojas Games!\n")
 	// Continuar na loja
      enquanto(continua2) {
 		// Peça nome e cpf do cliente
@@ -178,7 +178,7 @@ programa
 		*/
 		limpa()
 		escreva("---------------------------------------")
-		escreva("\n\nGMF Games - 572.198.047/0001-77\n")
+		escreva("\"Lojas Games - 572.198.047/0001-77\n")
 		escreva("\n------------------------------------\n")
 		escreva("comprador "+comprador[0] + " - CPF: " + comprador[1] + "\n")
 		para (x = 0; x < 10; x++) {
@@ -216,7 +216,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6720; 
+ * @POSICAO-CURSOR = 2199; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
