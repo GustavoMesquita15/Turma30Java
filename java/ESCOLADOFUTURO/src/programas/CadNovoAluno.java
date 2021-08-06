@@ -1,29 +1,32 @@
 package programas;
 
+import java.util.Scanner;
+
+
+
 public class CadNovoAluno {
 
 	public static void main(String[] args) {
-
-		Aluno exemplo1 = new Aluno();
-		Aluno exemplo2 = new Aluno();
-		exemplo1.nome = "EPAMINONDAS";
-		exemplo1.matricula = "MAT-1";
-		exemplo1.nota = 5;
-		exemplo1.anoNascimento = 2005;
 		
-		exemplo2.nome = "Maria";
-		exemplo2.matricula = "MAT-200";
-		exemplo2.nota = 10;
-		exemplo2.anoNascimento = 1978;
+		//instanciar um aluno
+		
+		Scanner leia = new Scanner(System.in);
+		Aluno exemplo1 = new Aluno(); //objeto do tipo aluno
+		
+		System.out.println("Digite  o nome do aluno :");
+		exemplo1.nome = leia.next();
+		System.out.println("Digite a matricula :");
+		exemplo1.matricula = leia.next().toUpperCase();
+		System.out.println("Digite o ano de nascimento");
+		exemplo1.anoNascimento = leia.nextInt();
+		
+		System.out.println("Matricula "+exemplo1.matricula);
+		System.out.println("Nome :"+exemplo1.nome);
+		exemplo1.mostraIdade();
 		
 		
-		if(exemplo1.nota > exemplo2.nota) {
-			System.out.println("A maior nota é do alune "+exemplo1.nome+" e sua idade é "+(2021-exemplo1.anoNascimento));
-		}
-		else {
-			System.out.println("A maior nota é do alune "+exemplo2.nome+" e sua idade é "+(2021-exemplo2.anoNascimento));
-
-		}
+		
+		
 	}
 
 }

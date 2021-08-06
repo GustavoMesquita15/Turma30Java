@@ -1,16 +1,12 @@
-/*4) Crie uma classe funcionário e apresente os atributos e métodos
-referentes esta classe, em seguida crie um objeto funcionário, defina as
-instancias deste objeto e apresente as informações deste objeto no
-console.*/
 package lista4;
 
-public class Ex4 {
+public class Funcionario {
 
 	String nome, funcao;
 	int matricula, cargaDiaria;
 	double salario;
 	
-	public void Funcionario (String nome, String funcao, int matricula, int cargaDiaria) {
+	public Funcionario (String nome, String funcao, int matricula, int cargaDiaria) {
 		this.nome = nome;
 		this.funcao = funcao;
 		this.matricula = matricula;
@@ -33,4 +29,5 @@ public class Ex4 {
 	public double impostoSobreSalario() {
 		return salario * 0.9;
 	}
+	
 }

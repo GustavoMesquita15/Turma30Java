@@ -1,18 +1,13 @@
-  
-/*6) Crie uma classe conta bancaria e apresente os atributos e métodos
-referentes esta classe, em seguida crie um objeto conta bancaria, defina
-as instancias deste objeto e apresente as informações deste objeto no
-console.*/
 package lista4;
 
-public class Ex6 {
+public class ContaBancaria {
 
 	private double saldo = 0;
 	public String tipo;
 	public int numeroConta;
 	public boolean ativo;
 	
-	public void ContaBancaria(String tipo, int numeroConta, boolean ativo) {
+	public ContaBancaria(String tipo, int numeroConta, boolean ativo) {
 		this.tipo = tipo;
 		this.ativo = ativo;
 		this.numeroConta = numeroConta;

@@ -1,9 +1,6 @@
-/*2) Crie uma classe avião e apresente os atributos e métodos referentes
-esta classe, em seguida crie um objeto avião, defina as instancias deste
-objeto e apresente as informações deste objeto no console.*/
 package lista4;
 
-public class Ex2 {
+public class Aviao {
 
 	boolean ligado, tremDePousoAtivo = true, voando;
 	int turbinas, velocidade;

@@ -1,16 +1,13 @@
-/*7) Crie uma classe paciente e apresente os atributos e métodos referentes
-esta classe, em seguida crie um objeto paciente, defina as instancias deste
-objeto e apresente as informações deste objeto no console.*/
 package lista4;
 
-public class Ex7 {
+public class Paciente {
 
 	public String exames[], receitas[];
 	public String nome;
 	public int idade;
 	public double peso, tamanho;
 
-	void Paciente(String nome, int idade){
+	Paciente(String nome, int idade){
 		this.nome = nome;
 		this.idade = idade;
 	}
