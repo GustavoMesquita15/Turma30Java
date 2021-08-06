@@ -81,18 +81,7 @@ public class CadAluno {
 			}
 		}
 
-		// laço e pede :
-		// pede pela matricula 1 aluno
-		// informar a nota deste aluno
-		// vai informar se o aluno ainda continua ativo ou não [o usuario não pode
-		// digitar true ou false
-		// tem que fazer o processo até que pergunta continua sim ou não seja não
-		// após mostra todos os alunos com nota pela regra
-		// até 5 - estude mais
-		// acima de 5 - otimo, continue assim
-		// aluno inativo ou aluno ativo baseado no true ou false de ativo
-		// somente dos alunos que tem nota
-
+		
 	}
 
 }
