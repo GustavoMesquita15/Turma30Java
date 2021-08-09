@@ -1,264 +1,202 @@
 programa
 {
-        inclua biblioteca Matematica --> mat
-
-        funcao inicio()
-        {
-
-                const inteiro minimo = 10
-                inteiro x = 0, y = 0
-                inteiro estoque[minimo] = {10,10,10,10,10,10,10,10,10,10}
-                real valor[minimo] = {500.00,200.00,299.00,300.00,245.00,200.00,140.00,129.00,130.00,140.00}
-                inteiro codigo[minimo] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, vezes = 0
-                real valorCompras[minimo]
-                real valorTotal = 0.0, imp = 0.0, valorAtualizado = 0.0
-                cadeia produtos[minimo] = {"Playstation5","Playstation4","FifaUltimate","   XboxOne   ","       Gta       ","Controle PS5","Controle PS4","  Cabo Hdmi  ","  Controle U  ","TecladoGamer"}
-                cadeia compras[minimo]
-                caracter dinheiro, cheque, credito, parcelas, juros, notaFiscal, empresa, imposto, totalPagar, confirmacao, novoUser
-                cadeia pag, parc
-                logico user = verdadeiro
-
-                enquanto(user == verdadeiro) {
-                        escreva ("--------Bem Vindo a Smart Gamer!------------\n")
-                        escreva ("-------Novo mundo ao seu alcance!------------\n")
-                        escreva("\nCOD:\t"," PRODUTOS:\t" ,  "VALOR:\t" ,  "\tESTOQUE:\n")
-                        para(x = 0; x<10; x++){
-
-                                escreva(codigo[x]," - ",produtos[x],"\tR$",valor[x],"\t\t",estoque[x]," und. |\t","\n")
-
-                        }
-                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                        para(x = 0; x<10; x++) {
-                                leia(codigo[x])
-
-                                        se(codigo[x] == 1){
-                                                estoque[0] = estoque[0] -1
-                                                compras[x] = produtos[0]
-                                                valorCompras[x] = valor[0]
-                                                escreva("O produto ","'",produtos[0],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                } senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 2){
-                                                estoque[1] = estoque[1] -1
-                                                compras[x] = produtos[1]
-                                                valorCompras[x] = valor[1]
-                                                escreva("O produto ","'",produtos[1],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 3){
-                                                estoque[2]= estoque[2] -1
-                                                compras[x] = produtos[2]
-                                                valorCompras[x] = valor[2]
-                                                escreva("O produto ","'",produtos[2],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 4){
-                                                estoque[3] = estoque[3] -1
-                                                compras[x] = produtos[3]
-                                                valorCompras[x] = valor[3]
-                                                escreva("O produto ","'",produtos[3],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 5){
-                                                estoque[4] = estoque[4] -1
-                                                compras[x]= produtos[4]
-                                                valorCompras[x] = valor[4]
-                                                escreva("O produto ","'",produtos[4],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 6){
-                                                estoque[5] = estoque[5] -1
-                                                compras[x] = produtos[5]
-                                                valorCompras[x] = valor[5]
-                                                escreva("O produto ","'",produtos[5],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 7){
-                                                estoque[6] = estoque[6] -1
-                                                compras[x] = produtos[6]
-                                                valorCompras[x] = valor[6]
-                                                escreva("O produto ","'",produtos[6],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 8){
-                                                estoque[7] = estoque[7] -1
-                                                compras[x] = produtos[7]
-                                                valorCompras[x] = valor[7]
-                                                escreva("O produto ","'",produtos[7],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 9){
-                                                estoque[8] = estoque[8] -1
-                                                compras[x] = produtos[8]
-                                                valorCompras[x] = valor[8]
-                                                escreva("O produto ","'",produtos[8],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                        se(codigo[x] == 10){
-                                                estoque[9] = estoque[9] -1
-                                                compras[x] = produtos[9]
-                                                valorCompras[x] = valor[9]
-                                                escreva("O produto ","'",produtos[9],"'", " foi adicionado ao carrinho.\n")
-                                                escreva("\nDeseja adicionar outros produtos ao carrinho (S/N): ")
-                                                leia(confirmacao)
-                                                se (confirmacao == 'S' ou confirmacao == 's'){
-                                                        escreva("\nPor favor, digite o código do produto que deseja: ")
-                                                }senao {
-                                                        pare
-                                                }
-                                        }
-                                }
-                                limpa()
-                                escreva("Carrinho de compras:\n")
-                                escreva("PRODUTOS:\t","\tVALOR:\n")
-                                para(x = 0; x < minimo; x++ ){
-                                        valorTotal = valorTotal + valorCompras[x]
-                                        escreva("_______________\n")
-                                        escreva(x + 1," - ",compras[x],"\t","R$ ", valorCompras[x],"\n")
-                                }
-                                imp = mat.arredondar((valorTotal*0.09), 2)
-                                escreva("\nValor total do carrinho: R$",valorTotal)
-                                escreva("\nValor total dos impostos a serem pagos: R$",imp,"\n")
-                                escreva("\n============ FORMA DE PAGAMENTO =============\n")
-                                escreva ("\n\nInsira 'A' para á vista em dinheiro, 'AC' para á vista no cartão de crédito ou 'CC' para cartão de crédito: ")
-                                leia (pag)
-
-                                se (pag == "A" ou pag == "a")
-                                {
-                                        valorAtualizado = valorTotal * 0.10 / 100
-                                        valorTotal = valorTotal - valorAtualizado
-                                }
-                                se (pag == "AC" ou pag == "ac")
-                                {
-                                        valorAtualizado = valorTotal * 0.10
-                                        valorTotal = valorTotal - valorAtualizado
-                                }
-                                se (pag == "CC" ou  pag == "cc")
-                                {
-                                        escreva ("\nEm 2x: ")
-                                        leia (parc)
-
-                                        se (parc == "2x" ou parc == "2")
-                                        {
-                                                vezes = 1       
-                                        }
-                                        senao se (parc == "3x" ou parc == "3")
-                                        {
-                                                vezes = 2       
-                                                valorAtualizado = valorTotal*0.15
-                                                valorTotal = valorTotal + valorAtualizado
-                                        }
-                                }
-
-                                escreva ("\nDeseja a impressão da nota fiscal - S/N ?")
-                                leia (notaFiscal)
-
-                                se (notaFiscal == 'S' ou notaFiscal == 's')
-                                {
-                                        limpa ()
-                                        escreva ("============ NOTA FISCAL ==========\n")
-                                        escreva ("============ Smart Gamer! ==========\n")
-                                        para(x = 0; x < minimo; x++ ){
-                                        escreva("==============================================\n")
-                                        escreva(x + 1," - ",compras[x],"\t","R$ ", valorCompras[x],"\n")                               
-                                        }
-                                        escreva ("\n================= IMPOSTOS PAGOS = " + imp + " =================\n")                                       
-
-                                        se (vezes == 1)
-                                        {
-                                                escreva ("\n\n========== TOTAL A SER PAGO = R$ " + valorTotal + " ===============\n")
-                                                valorTotal =mat.arredondar((valorTotal / 2), 2)
-                                                escreva ("\n\n========== PARCELADO EM 2X DE R$ " + valorTotal + " =============\n")
-                                        }
-                                        senao
-                                        {
-                                                escreva ("\n\n============ TOTAL A SER PAGO = R$ " + valorTotal + " =============\n")
-                                        }
-                                        escreva ("\n\n========== OBRIGADO E VOLTE SEMPRE ==============\n")
-
-                                }
-                                senao{
-
-                                        escreva ("\n\n============= OBRIGADO E VOLTE SEMPRE ==============\n\n")
-                                }
-                                escreva("\nDeseja continuar com novas compras (S/N): " )
-                                leia(novoUser)
-                                se (novoUser == 'S' ou novoUser == 's') {
-                                        limpa()
-                                        user = verdadeiro
-                                } senao {
-
-                                        user = falso
-                                        limpa()
-                                        escreva("   Obrigado!! \n ")
-                                        escreva("Volte sempre!!")
-                                }
+	inclua biblioteca Matematica-->mat
+	inclua biblioteca Texto
+	inclua biblioteca Tipos
+	
+	funcao inicio()
+	{
+	cadeia mercadoria[10]= {"Playstation5","Playstation4","FifaUltimate"," XboxOne ","   Gta ","Controle PS5","Controle PS4","  Cabo Hdmi  ","  Controle U  ","TecladoGamer"}
+     inteiro unidades [10] ={10,10,10,10,10,10,10,10,10,10}
+     real preco [10] ={500.00,200.00,299.00,300.00,245.00,200.00,140.00,129.00,130.00,140.00}
+     logico continua
+     caracter cont = ' '
+     caracter continuar2
+     logico continua2 = verdadeiro
+     cadeia codigo3
+     cadeia codigo4 [10]
+     cadeia codigo [10]
+     caracter pagamento = '0'
+     real imposto
+     inteiro qntd = 0
+     cadeia comprador[2]
+	inteiro x
+	inteiro compras[10]
+	real total = 0.0, parcelas = 0.0
+	caracter op = ' '
 
 
-                }
-        }
+	escreva("Digite seu nome: \n")
+		leia(comprador[0])
+		escreva("Digite seu CPF: \n")
+		leia(comprador[1])
+
+		para(inteiro y = 0 ; y < 10; y++){
+		se(y > 8) {
+		codigo4[y] = "G-"+ (y+1)
+		}
+		senao
+		{
+			codigo4[y] = "G-0" + (y+1)
+		}
+
+	
+		}
+			limpa()
+		
+     escreva ("--------Bem Vindo a Smart Gamer!-------------\n")
+	escreva ("-------Novo mundo ao seu alcance!------------\n")
+	escreva("\n")
+     		faca{
+     		faca {
+		// Liste os produtos a disposição
+		escreva("\nCOD:\t"," PRODUTOS:\t" ,  "VALOR:\t" ,  "ESTOQUE:\n")
+		
+	  	para(inteiro i = 0 ; i < 10; i++){
+			escreva(codigo4[i] + " \t ",mercadoria[i],"\t ",mat.arredondar(preco[i],2), "\t ", unidades[i])
+			escreva("\n")
+		}
+		escreva("\n")
+		escreva("Nossos estoques contam com 10 unidades de cada produto. Boas Compras!")
+			// Pedir código do produto a ser comprado
+			escreva("\nDigite o código do produto que deseja comprar: \n")
+			leia(codigo3)
+			para (inteiro r = 0; r < 10; r++) {
+				se (codigo3 == codigo4[r]){
+					escreva("O produto selecionado: ")
+					escreva(+ mercadoria[r],"\nPreço Final: R$",mat.arredondar(preco[r],2), "\nEstoque: ", unidades[r])
+					escreva("\nConfirmar pedido S/N:  ")
+					leia(op)
+				}
+			}
+					se (op == 'S' ou op == 's') {
+							escreva("\nDigite a quantidade que deseja: \n")
+							leia(qntd)
+					}
+					
+					enquanto (qntd < 1 ou qntd > 10) {
+						para  (inteiro g = 0; g < 1; g++){
+								escreva("\nQuantidade indisponivel, escreva uma quantidade acima de 0 e abaixo de" + " " + unidades[g]+ " "+ "unidade: ")
+							 	leia(qntd)
+							}
+					}
+				
+						// Caso a quantidade escolhida seja menor ou igual a quantidade de unidades em estoque,
+						// adicionar a quantidade à compra e subtrair a quantidade das unidades em estoque
+						para (inteiro t = 0; t < 10; t++) {
+						se (codigo3 == codigo4[t] e qntd <= unidades[t]) {
+							compras[t] = compras[t] + qntd
+							unidades[t] = unidades[t] - qntd
+							total += (preco[t] * qntd)
+							escreva("Você selecionou " + qntd + " unidades de " + mercadoria[t] + "\n")
+							
+							 se(qntd < 1 ou qntd > 10) {
+							escreva("Não há unidades o suficiente disponível em estoque!!\n")
+							escreva("Estoque: " + unidades[t] + " unidades de " + mercadoria[t] + "\n")
+							pare
+						}
+						} 
+						}
+			para(x= 0; x < 10; x++) {
+				// Loop pelo vetor de compras e confira, caso haja compras, imprimir a relação para o usuário
+				se (compras[x] != 0) {
+					escreva("\nRestam " + unidades[x] + " unidades de :" + mercadoria[x] + "\n")
+				}
+			}
+			escreva("\nDeseja continuar comprando S/N: \n")
+			leia(cont)
+			limpa()
+     		}
+     		enquanto (cont == 'S' ou cont == 's')
+					
+			// Alterar o valor da variável continua de verdadeiro para falso, caso o usuário decida não continuar comprando
+			// fazendo assim que o loop do carrinho se quebre
+			
+					
+
+		escreva("\nVocê finalizou suas compras!\n")
+		escreva("Seu carrinho:\n\n")
+		// Listar as compras no carrinho
+		para (x = 0; x < 10; x++) {	
+			se (compras[x] != 0) {
+				escreva(compras[x] + " unidades de " + mercadoria[x] + "\n")
+				escreva("\n----------------------------------------------------------------------\n")
+			}
+		}
+		// Calcular imposto e mostrar opções de pagamento
+		imposto = total * 0.09
+		escreva("O valor total de sua compra foi: R$ " + total + " e R$ " + imposto + " de impostos\n")
+		escreva("Opções de pagamento: ")
+		escreva("\n1 - Á vista em dinheiro ou cheque(10% de desconto)")
+		escreva("\n2 - A vista no cartão de crédito(15% de desconto)")
+		escreva("\n3 - Em duas vezes(15% de acréscimo)")
+		
+		// Pergunte a forma de pagamento até que seja respondido uma forma válida
+		faca {
+			escreva("\nDigite a forma de pagamento: \n")
+			leia(pagamento)
+			se (pagamento == '1') {
+				total = total - (total * 0.1)
+			} senao se (pagamento == '2') {
+				total = total - (total * 0.10)
+			} senao se (pagamento == '3') {
+				total = total + (total * 0.15)
+			} senao {
+				escreva("\nEscolha uma forma de pagamento válida!!\n")
+			}
+		} enquanto (pagamento != '1' e pagamento != '2' e pagamento != '3')
+		/*
+			NOME DA LOJA - CNPJ
+			NOME DO COMPRADOR - CPF	
+			Loop (valor de cada produto):
+				quantidae - produto - valor do produto
+			valor do imposto
+			forma de pagamento
+			valor total da nota
+		*/
+		limpa()
+		escreva("\n-----------------------------------\n")
+		escreva("\"Smart Gamer - 572.198.047/0001-77\n")
+		escreva("\n-----------------------------------\n")
+		escreva("Nome: "+comprador[0] + "\nCPF: " + comprador[1] + "\n")
+		escreva("\n")
+		escreva("\n")
+		escreva("QUANTIDADE:\tPRODUTO:\tPREÇO: ")
+		para (x = 0; x < 10; x++) {
+			se (compras[x] != 0) {
+				escreva("\n")
+				escreva(compras[x] + "\t\t" + mercadoria[x] + " \tR$" + preco[x] + "\n")
+				escreva("\n")
+			}
+		}
+		escreva("\n")
+		escreva("Imposto de ICMS R$ " + mat.arredondar(imposto, 2) + "\n")
+		escreva("\n------------------------------------\n")
+		escreva("Total da nota: R$ " + mat.arredondar((total + imposto),2)+ "\n\n")
+		escreva("--------------------------------------\n")
+		
+		
+		se (pagamento == '3') {
+			parcelas = total / 2
+			escreva("Pagar em 2x de R$ " +mat.arredondar(parcelas,2) + "\n")
+		} 
+		escreva("Deseja comprar mais S/N: \n")
+		leia(continuar2)
+		limpa()
+     	
+	}
+	enquanto (continuar2 =='S' ou op == 's')
+	escreva("-----Obrigado!!------\n")
+	escreva("----Até Breve!!----")
+			}
+		
 }
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 17121; 
+ * @POSICAO-CURSOR = 6166; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
