@@ -1,6 +1,7 @@
+  
 package Classes;
 
-public class Celulares extends ClasseMae{
+public class Celulares extends Produto {
     //ATRIBUTOS
     private String marca;
     private String modelo;
